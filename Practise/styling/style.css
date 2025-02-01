@@ -1,0 +1,161 @@
+body
+{
+    margin: 0;
+}
+
+#topBar
+{
+    width: 100%;
+    height: 75px;
+    background-color: black;
+}
+
+#container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow-x: scroll;
+    width: 100%;
+    height: calc(100vh - 75px);
+    padding: 10px;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+
+}
+
+.item
+{
+    background-color: rgba(0, 0, 0, 0.48);
+    height: 95%;
+    border-radius: 10px;
+    margin-top: auto;
+    min-width: calc((100% / 5) - 8px);
+    margin-bottom: auto;
+    transition: ease 0.5s;
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+.item.enlarged
+{
+    transform: scale(1.04);
+    transition: ease 0.5s;
+    box-shadow: 1px 8px 8px black;
+}
+
+.images
+{
+    display: flex;
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+#item1
+{
+    background-image: url(../images/StarWarsBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#item2
+{
+    background-image: url(https://indianajones.bethesda.net/_static-indianajones/images/scrollytelling/sukhothai.webp);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#item3
+{
+    background-image: url(../images/AvengersTower.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#item4
+{
+    background-image: url(../images/PiratesOfTheCaribbeanBackground.jpg);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+
+#item5
+{
+    background-image: url(../images/TheLordOfTheRingsBackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo
+{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+#darthVader
+{
+    position: absolute;
+    width: 30vw;
+    margin-top: 100px;
+}
+
+#indianaJonesLogo
+{
+    margin-top: 100px;
+}
+
+#indianaJones
+{
+    margin-left: 120px;
+    width: 20vw;
+    margin-top: 180px;
+}
+
+#marvelLogo
+{
+    width: 90%;
+    margin-top: 100px;
+}
+
+#ironMan
+{
+    position: absolute;
+    width: 20vw;
+    margin-left: 120px;
+    bottom: 0;
+}
+
+#piratesOfTheCaribbeanLogo
+{
+    width: 90%;
+    margin-top: 100px;
+}
+
+#jackSparrow
+{
+    width: 20vw;
+    margin-left: 120px;
+    margin-top: 250px;
+}
+
+#theLordOfTheRingsLogo
+{
+    margin-top: 50px;
+    width: 80%;
+}
+
+#gandalf
+{
+    width: 25vw;
+    margin-left: 70px;
+    margin-top: 200px;
+}
