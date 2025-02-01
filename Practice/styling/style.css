@@ -94,6 +94,21 @@ body
     background-position: center;
 }
 
+#item6
+{
+    background-image: url(../images/ToyStoryBackground.png);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+#item7
+{
+    background-image: url(../images/GhostbustersBackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 .logo
 {
     display: block;
@@ -165,4 +180,23 @@ body
 {
     margin-top: 100px;
     width: 80%;
+}
+
+#woody
+{
+    width: 14vw;
+    margin-left: 175px;
+    margin-top: 240px;
+}
+
+#ghostbustersLogo
+{
+    margin-top: 100px;
+    width: 100%;
+}
+
+#peterVenkman
+{
+    margin-top: 250px;
+    margin-left: 200px;
 }
