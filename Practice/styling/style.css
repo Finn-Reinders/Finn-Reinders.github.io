@@ -36,6 +36,7 @@ body
     transition: ease 0.5s;
     scroll-snap-align: center;
     overflow: hidden;
+    scale: 1;
 }
 
 .item.enlarged
