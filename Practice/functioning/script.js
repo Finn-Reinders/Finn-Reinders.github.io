@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const container = document.getElementById("container");
     const background = document.getElementById("background");
 
