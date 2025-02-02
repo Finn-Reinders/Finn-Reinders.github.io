@@ -109,6 +109,29 @@ body
     background-position: center;
 }
 
+#item8
+{
+    background-image: url(../images/GothamCity.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#item9
+{
+    background-image: url(../images/PlanetOfTheApesBackground.jpg);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+
+#item10
+{
+    background-image: url(../images/JurassicParkBackground.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
 .logo
 {
     display: block;
@@ -184,9 +207,10 @@ body
 
 #woody
 {
+    position: absolute;
     width: 14vw;
-    margin-left: 175px;
-    margin-top: 240px;
+    left: calc(75% - 7vw);
+    top: calc(75% - 7vw);
 }
 
 #ghostbustersLogo
@@ -199,4 +223,40 @@ body
 {
     margin-top: 250px;
     margin-left: 200px;
+}
+
+#batmanLogo
+{
+    margin-top: 100px;
+    width: 100%;
+}
+
+#batman
+{
+    margin-top: 230px;
+    margin-left: -40px;
+}
+
+#planetOfTheApesLogo
+{
+    margin-top: 100px;
+    width: 100%;
+}
+
+#caesar
+{
+    margin-top: 200px;
+    margin-left: -50px;
+}
+
+#jurassicParkLogo
+{
+    margin-top: 100px;
+    width: 90%;
+}
+
+#owenGrady
+{
+    margin-top: 150px;
+    margin-left: 100px;
 }
