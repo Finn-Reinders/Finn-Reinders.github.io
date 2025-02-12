@@ -28,9 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     duplicateItems();
 
     container.addEventListener("scroll", () => {
-        if (container.scrollLeft === 0) {
+        if (container.scrollLeft === 0)
+        {
             container.scrollLeft = container.scrollWidth / 2;
-        } else if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+        }
+        else if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1)
+        {
             container.scrollLeft = container.scrollWidth / 4;
         }
         updateCenterItem();
