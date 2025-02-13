@@ -276,8 +276,10 @@ body {
 
 #batman
 {
-    margin-top: 230px;
-    margin-left: -40px;
+    position: absolute;
+    width: 25vw;
+    left: calc(75% - 12vw);
+    top: calc(75% - 10vw);
 }
 
 #planetOfTheApesLogo
@@ -330,7 +332,9 @@ body {
 
     #peterVenkman
     {
-        width: 25vw;
+        width: 22vw;
+        left: calc(75% - 17vw);
+        top: calc(75% - 9vw);
     }
 
     #jackSparrow
@@ -349,15 +353,29 @@ body {
 
     #darthVader
     {
-        width: 40vw;
-        left: calc(75% - 28vw);
-        top: calc(75% - 15vw);
+        width: 35vw;
+        left: calc(75% - 25vw);
+        top: calc(75% - 10vw);
     }
 
     #ironMan
     {
         width: 25vw;
         left: calc(75% - 20vw);
+        top: calc(75% - 10vw);
+    }
+
+    #indianaJones
+    {
+        width: 22vw;
+        left: calc(75% - 17vw);
+        top: calc(75% - 9vw);
+    }
+
+    #batman
+    {
+        width: 40vw;
+
         top: calc(75% - 10vw);
     }
 }
