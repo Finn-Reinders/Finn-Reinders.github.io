@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styling/style.css">
     <link rel="icon" href="images/icon.png">
     <script src="functioning/script.js"></script>
@@ -13,7 +16,16 @@
 <body>
 <div id="background"></div>
 <div id="topBar">
-    <div id="menuLogo"><img onclick="openMenu()" id="websiteLogo" src="images/WebsiteLogo.png" alt="LOGO"></div>
+
+    <div id="menuLogo">
+        <ul style="display: none" id="menuItemsId">
+            <li class="menuItemsClass"><a class="links" href="index.html">HOME</a></li>
+            <li class="menuItemsClass"><a class="links" href="">ABOUT US</a></li>
+            <li class="menuItemsClass"><a class="links" href="">CONTACT</a></li>
+            <li class="menuItemsClass"><a class="links" href="">SUBSCRIPTIONS</a></li>
+        </ul>
+        <img onclick="openMenu()" id="websiteLogo" src="images/WebsiteLogo.png" alt="LOGO">
+    </div>
 </div>
 
 <div id="container">

@@ -6,15 +6,19 @@ body {
 
 #menuLogo
 {
+    justify-content: center;
     position: absolute;
     background-color: black;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     height: 75px;
     transition: ease 0.5s;
     box-shadow: 0 2px 10px black;
     display: flex;
-
+    z-index: 10;
+    flex-direction: column;
+    padding-bottom: 5px;
 }
 
 #menuLogo:hover
@@ -24,7 +28,57 @@ body {
     transition: ease 0.5s;
 }
 
-#background {
+#websiteLogo
+{
+    border-radius: 10px;
+    height: 75px;
+    transition: ease 0.5s;
+    margin-top: auto;
+}
+
+#menuItemsId
+{
+    list-style: none;
+    margin:auto;
+    padding: 0;
+    font-size: 2em;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+}
+
+.menuItemsClass
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.links
+{
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.links::after
+{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: calc(50% - 10px);
+    bottom: -10px;
+    background-color: white;
+    transition: ease .2s;
+}
+
+.links:hover:after
+{
+    width: 10px;
+    height: 10px;
+}
+
+#background
+{
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +89,8 @@ body {
     opacity: 1;
 }
 
-#container {
+#container
+{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,20 +110,12 @@ body {
     background-color: #000000;
     display: flex;
     justify-content: center;
-    align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 2px 10px black;
 }
 
-#websiteLogo
-{
 
-    border-radius: 10px;
-    height: 75px;
-    transition: ease 0.5s;
-    box-shadow: 0 2px 10px black;
-}
 
 #websiteLogo:hover
 {
