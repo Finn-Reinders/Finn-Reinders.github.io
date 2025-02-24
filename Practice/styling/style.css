@@ -4,6 +4,26 @@ body {
     user-select: none;
 }
 
+#menuLogo
+{
+    position: absolute;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 75px;
+    transition: ease 0.5s;
+    box-shadow: 0 2px 10px black;
+    display: flex;
+
+}
+
+#menuLogo:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
+
 #background {
     position: fixed;
     top: 0;
@@ -43,7 +63,7 @@ body {
 
 #websiteLogo
 {
-    margin-top: 20px;
+
     border-radius: 10px;
     height: 75px;
     transition: ease 0.5s;
@@ -53,8 +73,7 @@ body {
 #websiteLogo:hover
 {
     cursor: pointer;
-    transform: scale(1.1);
-    transition: ease 0.5s;
+
 }
 
 .item
@@ -69,6 +88,7 @@ body {
     scroll-snap-align: center;
     overflow: hidden;
     scale: 1;
+    cursor: pointer;
 }
 
 .item.enlarged
@@ -81,6 +101,7 @@ body {
 .images
 {
     display: flex;
+    -webkit-user-drag: none;
 }
 
 ::-webkit-scrollbar
@@ -170,6 +191,7 @@ body {
     margin: 0 auto;
     max-width: 100%;
     max-height: 500px;
+    -webkit-user-drag: none;
 }
 
 #starWarsLogo
@@ -346,8 +368,8 @@ body {
 
     #caesar
     {
-        width: 50vw;
-        left: calc(75% - 40vw);
+        width: 30vw;
+        left: calc(75% - 27.5vw);
         top: calc(75% - 10vw);
     }
 
@@ -375,7 +397,7 @@ body {
     #batman
     {
         width: 40vw;
-
+        left: calc(75% - 27vw);
         top: calc(75% - 10vw);
     }
 }
@@ -401,6 +423,8 @@ body {
     #peterVenkman
     {
         width: 50vw;
+        left: calc(75% - 45vw);
+        top: calc(75% - 25vw);
 
     }
 
@@ -459,6 +483,13 @@ body {
     #planetOfTheApesLogo
     {
         width: 80vw;
+    }
+
+    #batman
+    {
+        width: 100vw;
+        left: calc(75% - 70vw);
+        top: calc(75% - 25vw);
     }
 }
 

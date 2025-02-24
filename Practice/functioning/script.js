@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("container");
     const background = document.getElementById("background");
 
-    // Define the background gradients for each item
+
     const backgroundColors = {
         item1: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(103,103,103,1) 100%)",
         item2: "radial-gradient(circle, rgba(151,175,209,1) 0%, rgba(84,77,43,1) 95%, rgba(32,24,11,1) 100%)",
@@ -61,22 +61,26 @@ document.addEventListener("DOMContentLoaded", () => {
         items.forEach(item => item.classList.remove("enlarged"));
         if (closestItem) closestItem.classList.add("enlarged");
 
-        // Update the background gradient by fading the current layer out, then in
         if (closestItem && closestItem.id in backgroundColors) {
             fadeBackground(backgroundColors[closestItem.id]);
         }
     }
 
     function fadeBackground(newGradient) {
-        // Fade out the current background
         background.style.opacity = 0;
 
-        // Delay the change of the background until fade-out is complete
         setTimeout(() => {
             background.style.background = newGradient;
-            background.style.opacity = 1; // Fade in the new background
-        }, 500); // Match the opacity transition time
+            background.style.opacity = 1;
+        }, 500);
     }
 
     updateCenterItem();
 });
+
+function openMenu()
+{
+    document.getElementById("menuLogo").style.height = "500px";
+}
+
+
