@@ -2,6 +2,7 @@ body {
     margin: 0;
     overflow: hidden;
     user-select: none;
+    -webkit-user-drag: none;
 }
 
 #menuLogo
@@ -23,7 +24,6 @@ body {
 
 #menuLogo:hover
 {
-    cursor: pointer;
     transform: scale(1.1);
     transition: ease 0.5s;
 }
@@ -48,33 +48,46 @@ body {
 
 .menuItemsClass
 {
-    text-align: center;
+    display: flex;
     margin-bottom: 10px;
+    align-content: center;
+}
+
+.icons
+{
+    display: inline-block;
+    height: 35px;
+    -webkit-user-drag: none;
 }
 
 .links
 {
     position: relative;
-    color: white;
+    color: #E3E3E3;
     text-decoration: none;
+    margin-left: 10px;
+}
+
+#homeButton
+{
+    margin-top: 25px;
 }
 
 .links::after
 {
     content: "";
     position: absolute;
-    height: 0;
+    height: 3px;
     width: 0;
-    right: calc(50% - 10px);
-    bottom: -10px;
-    background-color: white;
+    left: 0;
+    bottom: 0;
+    background-color: #E3E3E3;
     transition: ease .2s;
 }
 
 .links:hover:after
 {
-    width: 10px;
-    height: 10px;
+    width: 100%;
 }
 
 #background
