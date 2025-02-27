@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () =>
+{
+
+
 
     const container = document.getElementById("container");
     const background = document.getElementById("background");
@@ -17,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         item10: "radial-gradient(circle, rgba(75,62,37,1) 0%, rgba(63,52,37,1) 99%)",
     };
 
-    function duplicateItems() {
+    function duplicateItems()
+    {
         const items = Array.from(container.children);
         items.forEach(item => {
             let clone = item.cloneNode(true);
@@ -78,23 +82,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCenterItem();
 });
-
-let menuOpened = true;
-function openMenu() {
-
-    if (menuOpened === false)
-    {
-        document.getElementById("menuLogo").style.height = "300px";
-        menuOpened = true;
-        document.getElementById("menuItemsId").style.display = "block";
-    }
-    else if (menuOpened === true)
-    {
-        console.log("menuOpened");
-        document.getElementById("menuLogo").style.height = "75px";
-        menuOpened = false;
-        document.getElementById("menuItemsId").style.display = "none";
-    }
-}
 
 

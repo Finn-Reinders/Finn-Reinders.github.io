@@ -102,6 +102,16 @@ iframe
     width: 100%;
 }
 
+.underlines
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #E3E3E3;
+    transition: ease .2s;
+}
 
 #topBar
 {
@@ -122,3 +132,455 @@ iframe
     cursor: pointer;
 
 }
+
+body {
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#background
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 1;
+}
+
+#home
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow-x: scroll;
+    width: 100%;
+    height: calc(100vh - 75px);
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+}
+
+.item
+{
+    background-color: rgba(0, 0, 0, 0.48);
+    height: 95%;
+    border-radius: 10px;
+    margin-top: 8px;
+    min-width: calc((100% / 5) - 8px);
+    /*margin-bottom: auto;*/
+    transition: ease 0.5s;
+    scroll-snap-align: center;
+    overflow: hidden;
+    scale: 1;
+    cursor: pointer;
+}
+
+.item.enlarged
+{
+    transform: scale(1.04);
+    transition: ease 0.5s;
+    box-shadow: 0 8px 10px black;
+}
+
+.images
+{
+    display: flex;
+    -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+#item1
+{
+    background-image: url(../assets/StarWarsBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#item2
+{
+    background-image: url(../assets/IndianaJonesBackground.png);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#item3
+{
+    background-image: url(../assets/AvengersTower.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#item4
+{
+    background-image: url(../assets/PiratesOfTheCaribbeanBackground.jpg);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+
+#item5
+{
+    background-image: url(../assets/TheLordOfTheRingsBackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#item6
+{
+    background-image: url(../assets/ToyStoryBackground.png);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+#item7
+{
+    background-image: url(../assets/GhostbustersBackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#item8
+{
+    background-image: url(../assets/GothamCity.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#item9
+{
+    background-image: url(../assets/PlanetOfTheApesBackground.jpg);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+
+#item10
+{
+    background-image: url(../assets/JurassicParkBackground.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.logo
+{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 500px;
+    -webkit-user-drag: none;
+}
+
+#starWarsLogo
+{
+    top: 0;
+    width: 90vw;
+}
+
+#darthVader
+{
+    position: absolute;
+    width: 30vw;
+    bottom: calc(0% - 25vw);
+}
+
+#indianaJonesLogo
+{
+    margin-top: 100px;
+}
+
+#indianaJones
+{
+    position: absolute;
+    left: calc(75% - 7.5vw);
+    top: calc(75% - 12vw);
+    width: 17vw;
+}
+
+#marvelLogo
+{
+    width: 90%;
+    margin-top: 100px;
+}
+
+#ironMan
+{
+    position: absolute;
+    width: 20vw;
+    left: calc(75% - 10vw);
+    bottom: calc(0% - 4vw);
+}
+
+#piratesOfTheCaribbeanLogo
+{
+    width: 90%;
+    margin-top: 100px;
+}
+
+#jackSparrow
+{
+    position: absolute;
+    width: 20vw;
+    left: calc(75% - 7.5vw);
+    top: calc(75% - 12vw);
+}
+
+#theLordOfTheRingsLogo
+{
+    margin-top: 50px;
+    width: 80%;
+}
+
+#gandalf
+{
+    position: absolute;
+    width: 25vw;
+    left: calc(75% - 10vw);
+    top: calc(75% - 15vw);
+}
+
+#toyStoryLogo
+{
+    margin-top: 100px;
+    width: 80%;
+}
+
+#woody
+{
+    position: absolute;
+    width: 14vw;
+    left: calc(75% - 7vw);
+    top: calc(75% - 9vw);
+}
+
+#ghostbustersLogo
+{
+    margin-top: 100px;
+    width: 100%;
+}
+
+#peterVenkman
+{
+    position: absolute;
+    width: 14vw;
+    left: calc(40%);
+    top: calc(75% - 10vw);
+}
+
+#batmanLogo
+{
+    margin-top: 100px;
+    width: 100%;
+}
+
+#batman
+{
+    position: absolute;
+    width: 25vw;
+    left: calc(75% - 12vw);
+    top: calc(75% - 10vw);
+}
+
+#planetOfTheApesLogo
+{
+    margin-top: 100px;
+    width: 100%;
+}
+
+#caesar
+{
+    position: absolute;
+    width: 25vw;
+    left: calc(75% - 15vw);
+    top: calc(75% - 8vw);
+}
+
+#jurassicParkLogo
+{
+    margin-top: 100px;
+    width: 90%;
+}
+
+#owenGrady
+{
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+@media (max-width: 1300px)
+{
+    .item
+    {
+        min-width: calc((100% / 3) - 8px);
+    }
+    #woody
+    {
+        width: 20vw;
+        left: calc(50% - 10vw);
+    }
+    #theLordOfTheRingsLogo
+    {
+        top: 100px;
+    }
+
+    #gandalf
+    {
+        width: 30vw;
+        left: calc(50% - 12vw);
+    }
+
+    #peterVenkman
+    {
+        width: 22vw;
+        left: calc(75% - 17vw);
+        top: calc(75% - 9vw);
+    }
+
+    #jackSparrow
+    {
+        width: 25vw;
+        left: calc(75% - 20vw);
+        top: calc(75% - 10vw);
+    }
+
+    #caesar
+    {
+        width: 30vw;
+        left: calc(75% - 27.5vw);
+        top: calc(75% - 10vw);
+    }
+
+    #darthVader
+    {
+        width: 35vw;
+        left: calc(75% - 25vw);
+        top: calc(75% - 10vw);
+    }
+
+    #ironMan
+    {
+        width: 25vw;
+        left: calc(75% - 20vw);
+        top: calc(75% - 10vw);
+    }
+
+    #indianaJones
+    {
+        width: 22vw;
+        left: calc(75% - 17vw);
+        top: calc(75% - 9vw);
+    }
+
+    #batman
+    {
+        width: 40vw;
+        left: calc(75% - 27vw);
+        top: calc(75% - 10vw);
+    }
+}
+
+@media (max-width: 600px)
+{
+    .item
+    {
+        min-width: calc(100% - 8px);
+        justify-content: center;
+    }
+    #woody
+    {
+        width: 50vw;
+        left: calc(50% - 25vw);
+        top: calc(75% - 25vw);
+    }
+
+    #toyStoryLogo
+    {
+        width: 60vw;
+    }
+    #peterVenkman
+    {
+        width: 50vw;
+        left: calc(75% - 45vw);
+        top: calc(75% - 25vw);
+
+    }
+
+    #theLordOfTheRingsLogo
+    {
+        width: 60vw;
+    }
+
+    #gandalf
+    {
+        width: 75vw;
+        left: calc(50% - 30vw);
+        top: calc(75% - 40vw);
+    }
+
+    #jackSparrow
+    {
+        width: 70vw;
+        left: calc(50% - 32vw);
+        top: calc(75% - 30vw);
+    }
+
+    #ironMan
+    {
+        width: 75vw;
+        left: calc(75% - 55vw);
+        top: calc(75% - 25vw);
+    }
+
+    #darthVader
+    {
+        width: 100vw;
+        left: calc(75% - 70vw);
+        top: calc(75% - 30vw);
+    }
+
+    #starWarsLogo
+    {
+        width: 80vw;
+    }
+
+    #indianaJones
+    {
+        width: 65vw;
+        left: calc(75% - 50vw);
+        top: calc(75% - 25vw);
+    }
+
+    #caesar
+    {
+        width: 90vw;
+        left: calc(75% - 78vw);
+        top: calc(75% - 25vw);
+    }
+
+    #planetOfTheApesLogo
+    {
+        width: 80vw;
+    }
+
+    #batman
+    {
+        width: 100vw;
+        left: calc(75% - 70vw);
+        top: calc(75% - 25vw);
+    }
+}
+
+

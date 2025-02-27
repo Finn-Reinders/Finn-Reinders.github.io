@@ -15,18 +15,63 @@
 </head>
 <body>
 
+<!--TOP BAR-->
 <div id="topBar">
     <div id="menuLogo">
         <ul style="display: none" id="menuItemsId">
-            <li id="homeButton" class="menuItemsClass"><img class="icons" src="../assets/Home.png" alt="Home Icon"><a class="links" href="home.html" target="iframe">HOME.</a></li>
-            <li class="menuItemsClass"><img class="icons" src="../assets/Info.png" alt="Info Icon"><a class="links" href="aboutus.html" target="iframe">ABOUT US.</a></li>
-            <li class="menuItemsClass"><img class="icons" src="../assets/Contact.png" alt="Contact Icon"><a class="links" href="contact.html" target="iframe">CONTACT.</a></li>
-            <li class="menuItemsClass"><img class="icons" src="../assets/Subscriptions.png" alt="Subscription Icon"><a class="links" href="subscriptions.html" target="iframe">SUBSCRIPTIONS.</a></li>
+            <li id="homeButton" class="menuItemsClass">
+                <img class="icons" src="../assets/Home.png" alt="Home Icon">
+                <a id="homeLink" class="links" onclick="homePage()">HOME.
+                    <div style="width: 100%" class="underlines" id="homeUnderline"></div>
+                </a>
+            </li>
+            <li class="menuItemsClass">
+                <img class="icons" src="../assets/Info.png" alt="Info Icon">
+                <a class="links" onclick="aboutUsPage()">ABOUT US.
+                    <div style="width: 0" class="underlines" id="aboutUsUnderline"></div>
+                </a>
+            </li>
+            <li class="menuItemsClass">
+                <img class="icons" src="../assets/Contact.png" alt="Contact Icon">
+                <a class="links" onclick="contactPage()">CONTACT.
+                    <div style="width: 0" class="underlines" id="contactUnderline"></div>
+                </a>
+            </li>
+            <li class="menuItemsClass">
+                <img class="icons" src="../assets/Subscriptions.png" alt="Subscription Icon">
+                <a class="links" onclick="subscriptionsPage()">SUBSCRIPTIONS.
+                    <div style="width: 0" class="underlines" id="subscriptionsUnderline"></div>
+                </a>
+            </li>
         </ul>
         <img draggable="false" onclick="openMenu()" id="websiteLogo" src="../assets/WebsiteLogo.png" alt="LOGO">
     </div>
 </div>
 
-<iframe name="iframe" src="home.html" frameborder="0"></iframe>
+
+<!--HOME PAGE-->
+<div id="home" style="display: flex">
+    <div id="background"></div>
+    <div onclick="" class="item" id="item1"><img class="logo" id="starWarsLogo" src="../assets/StarWarsLogo.png" alt="Star Wars LOGO"><img class="images" id="darthVader" src="../assets/DarthVader.png" alt="Darth Vader"></div>
+    <div class="item" id="item2"><img class="logo" id="indianaJonesLogo" src="../assets/IndianaJonesLogo.png" alt="Indiana Jones LOGO"><img id="indianaJones" class="images" src="../assets/IndianaJones.png" alt="Indiana Jones"></div>
+    <div class="item" id="item3"><img class="logo" id="marvelLogo" src="../assets/MarvelLogo.png" alt="Marvel LOGO"><img id="ironMan" class="images" src="../assets/IronMan.png" alt="Iron Man"></div>
+    <div class="item" id="item4"><img class="logo" id="piratesOfTheCaribbeanLogo" src="../assets/PiratesOfTheCaribbeanLogo.png" alt="Pirates of the Caribbean LOGO"><img id="jackSparrow" class="images" src="../assets/JackSparrow.png" alt=""></div>
+    <div class="item" id="item5"><img class="logo" id="theLordOfTheRingsLogo" src="../assets/LordOfTheRingsLogo.png" alt=""><img id="gandalf" class="images" src="../assets/Gandalf.png" alt=""></div>
+    <div class="item" id="item6"><img class="logo" id="toyStoryLogo" src="../assets/ToyStoryLogo.png" alt=""><img class="images" id="woody" src="../assets/Woody.png" alt=""></div>
+    <div class="item" id="item7"><img class="logo" id="ghostbustersLogo" src="../assets/GhostbustersLogo.png" alt="Ghostbusters LOGO"><img id="peterVenkman" class="images" src="../assets/PeterVenkman.png" alt="Peter Venkman"></div>
+    <div class="item" id="item8"><img class="logo" id="batmanLogo" src="../assets/BatmanLogo.png" alt="Batman LOGO"><img id="batman" class="images" src="../assets/Batman.png" alt="Batman"></div>
+    <div class="item" id="item9"><img class="logo" id="planetOfTheApesLogo" src="../assets/PlanetOfTheApesLogo.png" alt="Planet Of The Apes LOGO"><img id="caesar" class="images" src="../assets/Caesar.png" alt="Caesar"></div>
+    <div class="item" id="item10"><img class="logo" id="jurassicParkLogo" src="../assets/JurassicParkLogo" alt="Jurassic Park LOGO"><img id="owenGrady" class="images" src="../assets/OwenGrady.png" alt="Owen Grady"></div>
+</div>
+<div id="aboutUs" style="display: none">
+
+</div>
+<div id="contact" style="display: none">
+
+</div>
+<div id="subscriptions" style="display: none">
+
+</div>
+
 </body>
 </html>
