@@ -1,3 +1,23 @@
+window.onload = function() {
+    let element = document.getElementById("loader");
+    element.style.animation = "loading 2s ease-in-out 1";
+addEventListener("animationend", function () {
+    element.classList.remove("loading");
+    element.style.animation = "loaded .8s linear 1 forwards";
+    setTimeout(function ()
+    {
+        document.getElementById("loaderScreen").classList.add("loaded");
+
+
+
+    }, 800);
+    document.getElementById("loader").addEventListener("transitionend", function ()
+    {
+        document.body.removeChild(document.querySelector(".loader"));
+    })
+})
+};
+
 document.addEventListener("DOMContentLoaded", () =>
 {
     const home = document.getElementById("home");
@@ -150,16 +170,12 @@ function openMenu() {
     if (menuOpened === true)
     {
         document.getElementById("menuLogo").style.top = "25px";
-        // document.getElementById("menuLogo").style.height = "300px";
         menuOpened = false;
-        // document.getElementById("menuItemsId").style.display = "block";
 
     }
     else if (menuOpened === false)
     {
         document.getElementById("menuLogo").style.top = "-225px";
-        // document.getElementById("menuLogo").style.height = "75px";
         menuOpened = true;
-        // document.getElementById("menuItemsId").style.display = "none";
     }
 }

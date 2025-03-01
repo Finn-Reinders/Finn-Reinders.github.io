@@ -5,13 +5,83 @@ body {
     -webkit-user-drag: none;
 }
 
-iframe
+#loaderScreen
 {
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
-    margin-top: -8px;
-    z-index: 1;
+    width: 100vw;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s, visibility 1s;
+}
+
+#loader
+{
+    display: block;
+    z-index: 1001;
+    width: 100px;
+    height: 100px;
+    background: white;
+
+}
+
+.loading
+{
+    animation: loading 2s infinite ease-in-out;
+}
+
+.loaded
+{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+@keyframes loading
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+   80%
+   {
+       transform: rotate(360deg);
+   }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaded
+{
+    0%
+    {
+        transform: scale(1);
+    }
+
+    80%
+    {
+        transform: scale(1.3);
+    }
+    100%
+    {
+        transform: scale(0);
+    }
+}
+
+.loaderHidden
+{
+    opacity: 0;
+    visibility: hidden;
 }
 
 #menuLogo
@@ -133,13 +203,6 @@ iframe
 
 }
 
-body {
-    margin: 0;
-    overflow: hidden;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
 #background
 {
     position: fixed;
@@ -168,12 +231,12 @@ body {
 
 .item
 {
+
     background-color: rgba(0, 0, 0, 0.48);
     height: 95%;
     border-radius: 10px;
     margin-top: 8px;
     min-width: calc((100% / 5) - 8px);
-    /*margin-bottom: auto;*/
     transition: ease 0.5s;
     scroll-snap-align: center;
     overflow: hidden;
@@ -416,8 +479,10 @@ body {
 
 #owenGrady
 {
-    margin-top: 150px;
-    margin-left: 100px;
+    position: absolute;
+    width: 14vw;
+    left: calc(75% - 5vw);
+    top: calc(75% - 10vw);
 }
 
 @media (max-width: 1300px)
@@ -488,6 +553,13 @@ body {
     {
         width: 40vw;
         left: calc(75% - 27vw);
+        top: calc(75% - 10vw);
+    }
+
+    #owenGrady
+    {
+        width: 20vw;
+        left: calc(75% - 5vw);
         top: calc(75% - 10vw);
     }
 }
@@ -581,6 +653,13 @@ body {
         left: calc(75% - 70vw);
         top: calc(75% - 25vw);
     }
+
+    #owenGrady
+    {
+        width: 70vw;
+        left: calc(75% - 40vw);
+        top: calc(75% - 35vw);
+    }
 }
 
 #subscriptionsContainer
@@ -588,7 +667,6 @@ body {
     margin: 30px;
     border-radius: 10px;
     display: flex;
-    background-color: black;
     width: 100vw;
     height: calc(100vh - 125px);
     justify-content: space-around;
@@ -616,24 +694,22 @@ body {
 
 .content
 {
-    background-color: rgba(0, 0, 0, 100);
-    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.95);
+    /*border: 2px solid white;*/
     border-radius: 10px;
-    width: 100%;
-    height: 85%;
+    width: calc((100vw / 3) - 5vw);
+    height: 82vh;
     display: block;
     margin-bottom: auto;
     margin-top: auto;
-    transition: .2s
+    transition: .2s;
+    padding: 30px;
+    text-align: center;
+
 }
 
 .content:hover
 {
     scale: 1.03;
     transition: ease-in .2s;
-}
-
-#standardDiv:hover ~ #subscriptionsContainer
-{
-    background-color: rgb(255, 0, 0);
 }
