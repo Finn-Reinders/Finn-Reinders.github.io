@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () =>
 });
 
 let menuOpened = true;
-
 function homePage()
 {
 
@@ -169,7 +168,7 @@ function openMenu() {
 
     if (menuOpened === true)
     {
-        document.getElementById("menuLogo").style.top = "25px";
+        document.getElementById("menuLogo").style.top = "0px";
         menuOpened = false;
 
     }

@@ -23,7 +23,6 @@ body {
 #loader
 {
     display: block;
-    z-index: 1001;
     width: 100px;
     height: 100px;
     background: white;
@@ -123,7 +122,6 @@ body {
     font-size: 2em;
     font-family: Roboto, sans-serif;
     font-weight: 600;
-
 }
 
 .menuItemsClass
