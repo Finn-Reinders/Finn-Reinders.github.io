@@ -78,21 +78,6 @@ document.addEventListener("DOMContentLoaded", () =>
 });
 
 let menuOpened = true;
-function openMenu() {
-
-    if (menuOpened === true)
-    {
-        document.getElementById("menuLogo").style.height = "300px";
-        menuOpened = false;
-        document.getElementById("menuItemsId").style.display = "block";
-    }
-    else if (menuOpened === false)
-    {
-        document.getElementById("menuLogo").style.height = "75px";
-        menuOpened = true;
-        document.getElementById("menuItemsId").style.display = "none";
-    }
-}
 
 function homePage()
 {
@@ -107,6 +92,8 @@ function homePage()
     document.getElementById("contactUnderline").style.width = "0";
     document.getElementById("subscriptionsUnderline").style.width = "0";
 
+    menuOpened = false;
+    openMenu();
 }
 
 function aboutUsPage()
@@ -120,6 +107,9 @@ function aboutUsPage()
     document.getElementById("aboutUsUnderline").style.width = "100%";
     document.getElementById("contactUnderline").style.width = "0";
     document.getElementById("subscriptionsUnderline").style.width = "0";
+
+    menuOpened = false;
+    openMenu();
 }
 
 function contactPage()
@@ -133,6 +123,9 @@ function contactPage()
     document.getElementById("aboutUsUnderline").style.width = "0";
     document.getElementById("contactUnderline").style.width = "100%";
     document.getElementById("subscriptionsUnderline").style.width = "0";
+
+    menuOpened = false;
+    openMenu();
 }
 
 function subscriptionsPage()
@@ -146,5 +139,27 @@ function subscriptionsPage()
     document.getElementById("aboutUsUnderline").style.width = "0";
     document.getElementById("contactUnderline").style.width = "0";
     document.getElementById("subscriptionsUnderline").style.width = "100%";
+
+    menuOpened = false;
+    openMenu();
 }
 
+
+function openMenu() {
+
+    if (menuOpened === true)
+    {
+        document.getElementById("menuLogo").style.top = "25px";
+        // document.getElementById("menuLogo").style.height = "300px";
+        menuOpened = false;
+        // document.getElementById("menuItemsId").style.display = "block";
+
+    }
+    else if (menuOpened === false)
+    {
+        document.getElementById("menuLogo").style.top = "-225px";
+        // document.getElementById("menuLogo").style.height = "75px";
+        menuOpened = true;
+        // document.getElementById("menuItemsId").style.display = "none";
+    }
+}

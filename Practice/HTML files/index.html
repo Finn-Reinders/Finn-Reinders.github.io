@@ -17,8 +17,8 @@
 
 <!--TOP BAR-->
 <div id="topBar">
-    <div id="menuLogo">
-        <ul style="display: none" id="menuItemsId">
+    <div style="top: -225px" id="menuLogo">
+        <ul id="menuItemsId">
             <li id="homeButton" class="menuItemsClass">
                 <img class="icons" src="../assets/Home.png" alt="Home Icon">
                 <a id="homeLink" class="links" onclick="homePage()">HOME.
@@ -70,7 +70,20 @@
 
 </div>
 <div id="subscriptions" style="display: none">
-
+    <div id="subscriptionsContainer">
+        <div class="subscriptions" id="standardDiv">
+            <h1 class="headers">STANDARD.</h1>
+            <div class="content"></div>
+        </div>
+        <div class="subscriptions" id="premiumDiv">
+            <h1 class="headers">PREMIUM.</h1>
+            <div class="content"></div>
+        </div>
+        <div class="subscriptions" id="familyDiv">
+            <h1 class="headers">FAMILY.</h1>
+            <div class="content"></div>
+        </div>
+    </div>
 </div>
 
 </body>
