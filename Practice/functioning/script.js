@@ -19,7 +19,7 @@ document.addEventListener("mousemove", (event) => {
     document.getElementById("cursor").style.transform = `translate(${event.clientX - 12.5}px, ${event.clientY - 12.5}px)`;
     const topBar = document.getElementById("topBar");
     const cursor = document.getElementById("cursor");
-
+    // test
     topBar.addEventListener("mouseenter", () => {
         cursor.classList.add("hover");
     })
