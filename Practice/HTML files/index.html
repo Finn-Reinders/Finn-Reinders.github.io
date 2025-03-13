@@ -16,9 +16,10 @@
 <body>
 <!--LOADING SCREEN-->
 <div id="loaderScreen">
-    <div id="loader" class="loading"></div>
+    <div id="loader"></div>
 </div>
-
+<!--CURSOR-->
+<div id="cursor"></div>
 <!--TOP BAR-->
 <div id="topBar">
     <div style="top: -225px" id="menuLogo">
@@ -27,6 +28,12 @@
                 <img class="icons" src="../assets/Home.png" alt="Home Icon">
                 <a id="homeLink" class="links" onclick="homePage()">HOME.
                     <div style="width: 100%" class="underlines" id="homeUnderline"></div>
+                </a>
+            </li>
+            <li class="menuItemsClass">
+                <img class="icons" src="../assets/Subscriptions.png" alt="Subscription Icon">
+                <a class="links" onclick="subscriptionsPage()">SUBSCRIPTIONS.
+                    <div style="width: 0" class="underlines" id="subscriptionsUnderline"></div>
                 </a>
             </li>
             <li class="menuItemsClass">
@@ -41,12 +48,7 @@
                     <div style="width: 0" class="underlines" id="contactUnderline"></div>
                 </a>
             </li>
-            <li class="menuItemsClass">
-                <img class="icons" src="../assets/Subscriptions.png" alt="Subscription Icon">
-                <a class="links" onclick="subscriptionsPage()">SUBSCRIPTIONS.
-                    <div style="width: 0" class="underlines" id="subscriptionsUnderline"></div>
-                </a>
-            </li>
+
         </ul>
         <img draggable="false" onclick="openMenu()" id="websiteLogo" src="../assets/WebsiteLogo.png" alt="LOGO">
     </div>

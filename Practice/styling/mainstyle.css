@@ -3,6 +3,26 @@ body {
     overflow: hidden;
     user-select: none;
     -webkit-user-drag: none;
+    cursor: none;
+}
+
+#cursor
+{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0.9;
+    pointer-events: none;
+    transition: transform 0.1ms linear;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
+
+}
+
+.hover
+{
+    border-radius: 50%;
 }
 
 #loaderScreen
@@ -29,18 +49,11 @@ body {
 
 }
 
-.loading
-{
-    animation: loading 2s infinite ease-in-out;
-}
-
 .loaded
 {
     opacity: 0;
     visibility: hidden;
 }
-
-
 
 @keyframes loading
 {
@@ -83,11 +96,38 @@ body {
     visibility: hidden;
 }
 
+@keyframes appear
+{
+    from
+    {
+        opacity: 0;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear
+{
+    from
+    {
+        opacity: 1;
+    }
+
+    to
+    {
+        opacity: 0;
+    }
+}
+
+
 #menuLogo
 {
     justify-content: center;
     position: absolute;
-    background-color: black;
+    background-color: #000000;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -197,8 +237,7 @@ body {
 
 #websiteLogo:hover
 {
-    cursor: pointer;
-
+    /*cursor: pointer;*/
 }
 
 #background
@@ -239,12 +278,12 @@ body {
     scroll-snap-align: center;
     overflow: hidden;
     scale: 1;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .item.enlarged
 {
-    transform: scale(1.04);
+    transform: scale(1.03);
     transition: ease 0.5s;
     box-shadow: 0 8px 10px black;
 }
@@ -668,6 +707,7 @@ body {
     width: 100vw;
     height: calc(100vh - 125px);
     justify-content: space-around;
+    z-index: 1;
 }
 
 .subscriptions
@@ -675,39 +715,41 @@ body {
     width: calc(100% / 3 - 100px);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .headers
 {
     display: inline-block;
-    color: white;
+    color: #e7e7e7;
     font-size: 3em;
     font-family: Roboto, sans-serif;
-    margin-bottom: 0;
-    margin-top: 30px;
+
     text-align: center;
     font-weight: bolder;
+    margin: 30px auto 0 auto;
 
 }
 
 .content
 {
-    background-color: rgba(0, 0, 0, 0.95);
-    /*border: 2px solid white;*/
+    background: linear-gradient(0deg, rgb(70, 70, 70) 0%, rgba(0, 0, 0, 0.94) 100%);
     border-radius: 10px;
     width: calc((100vw / 3) - 5vw);
-    height: 82vh;
-    display: block;
+    height: 87vh;
+    display: flex;
     margin-bottom: auto;
     margin-top: auto;
-    transition: .2s;
-    padding: 30px;
-    text-align: center;
-
+    transition: ease .4s;
+    padding: 0;
+    position: relative;
+    /*box-shadow: 0 5px 5px 1px grey;*/
 }
 
 .content:hover
 {
-    scale: 1.03;
-    transition: ease-in .2s;
+    box-shadow: 0 5px 5px 3px grey;
+    transition: ease .4s;
 }
+
