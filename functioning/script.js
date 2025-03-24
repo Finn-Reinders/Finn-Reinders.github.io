@@ -1,31 +1,28 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
     let element = document.getElementById("loader");
-    element.style.animation = "loading 1.5s ease-in-out 1";
-    addEventListener("animationend", function () {
-        element.classList.remove("loading");
-        element.style.animation = "loaded .8s linear 1 forwards";
-        setTimeout(function () {
-            document.getElementById("loaderScreen").classList.add("loaded");
 
+    element.style.animation = "loading 1.5s ease-in-out infinite";
 
-        }, 800);
-        document.getElementById("loader").addEventListener("transitionend", function () {
-            document.body.removeChild(document.querySelector(".loader"));
-        })
-    })
-};
+    window.onload = function () {
 
-document.addEventListener("mousemove", (event) => {
-    document.getElementById("cursor").style.transform = `translate(${event.clientX - 12.5}px, ${event.clientY - 12.5}px)`;
-    const topBar = document.getElementById("topBar");
-    const cursor = document.getElementById("cursor");
-    // test
-    topBar.addEventListener("mouseenter", () => {
-        cursor.classList.add("hover");
-    })
+        element.addEventListener("animationiteration", function () {
+            element.style.animation = "none"; 
+            element.offsetHeight;
+            element.style.animation = "loaded .8s linear 1 forwards";
+
+            setTimeout(function () {
+                document.getElementById("loaderScreen").classList.add("loaded");
+            }, 800);
+
+            element.addEventListener("transitionend", function () {
+                const loaderScreen = document.querySelector(".loader");
+                if (loaderScreen) {
+                    document.body.removeChild(loaderScreen);
+                }
+            });
+        }, { once: true }); 
+    };
 });
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const home = document.getElementById("home");
     const background = document.getElementById("background");
@@ -40,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         item8: "radial-gradient(circle, rgba(22,19,16,1) 0%, rgba(49,49,54,1) 100%)",
         item9: "radial-gradient(circle, rgba(214,226,241,1) 0%, rgba(98,118,67,1) 100%)",
         item10: "radial-gradient(circle, rgba(102,89,61,1) 0%, rgba(13,11,8,1) 100%)",
-
     };
 
     function duplicateItems() {
@@ -90,110 +86,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function fadeBackground(newGradient) {
-        background.style.opacity = 0;
+        background.style.opacity = "0";
 
         setTimeout(() => {
             background.style.background = newGradient;
-            background.style.opacity = 1;
+            background.style.opacity = "1";
         }, 500);
     }
 
     updateCenterItem();
 });
 
-let menuOpened = true;
+function switchPage(page) {
+    const pages = ["home", "subscriptions", "aboutUs", "contact"];
 
-function homePage() {
+    pages.forEach(p => {
+        const section = document.getElementById(p);
+        const underline = document.getElementById(`${p}Underline`);
 
-    document.getElementById("home").style.display = "flex";
-    document.getElementById("aboutUs").style.display = "none";
-    document.getElementById("contact").style.display = "none";
-    document.getElementById("subscriptions").style.display = "none";
+        if (p === page) {
+            section.style.display = "flex";
+            underline.style.width = "100%";
+        } else {
+            section.style.display = "none";
+            underline.style.width = "0";
+        }
+    });
 
-    // document.getElementById("home").style.animation = "appear 3s";
-    // document.getElementById("aboutUs").style.animation = "disappear 3s";
-    // document.getElementById("contact").style.animation = "disappear 3s";
-    // document.getElementById("subscriptions").style.animation = "disappear 3s";
-
-    document.getElementById("homeUnderline").style.width = "100%";
-    document.getElementById("aboutUsUnderline").style.width = "0";
-    document.getElementById("contactUnderline").style.width = "0";
-    document.getElementById("subscriptionsUnderline").style.width = "0";
-
-    menuOpened = false;
     openMenu();
 }
-
-function aboutUsPage() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("aboutUs").style.display = "flex";
-    document.getElementById("contact").style.display = "none";
-    document.getElementById("subscriptions").style.display = "none";
-
-    // document.getElementById("home").style.animation = "disappear 3s";
-    // document.getElementById("aboutUs").style.animation = "appear 3s";
-    // document.getElementById("contact").style.animation = "disappear 3s";
-    // document.getElementById("subscriptions").style.animation = "disappear 3s";
-
-    document.getElementById("homeUnderline").style.width = "0";
-    document.getElementById("aboutUsUnderline").style.width = "100%";
-    document.getElementById("contactUnderline").style.width = "0";
-    document.getElementById("subscriptionsUnderline").style.width = "0";
-
-    menuOpened = false;
-    openMenu();
-}
-
-function contactPage() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("aboutUs").style.display = "none";
-    document.getElementById("contact").style.display = "flex";
-    document.getElementById("subscriptions").style.display = "none";
-
-    // document.getElementById("home").style.animation = "disappear 3s";
-    // document.getElementById("aboutUs").style.animation = "disappear 3s";
-    // document.getElementById("contact").style.animation = "appear 3s";
-    // document.getElementById("subscriptions").style.animation = "disappear 3s";
-
-    document.getElementById("homeUnderline").style.width = "0";
-    document.getElementById("aboutUsUnderline").style.width = "0";
-    document.getElementById("contactUnderline").style.width = "100%";
-    document.getElementById("subscriptionsUnderline").style.width = "0";
-
-    menuOpened = false;
-    openMenu();
-}
-
-function subscriptionsPage() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("aboutUs").style.display = "none";
-    document.getElementById("contact").style.display = "none";
-    document.getElementById("subscriptions").style.display = "flex";
-
-    // document.getElementById("home").style.animation = "disappear 3s";
-    // document.getElementById("aboutUs").style.animation = "disappear 3s";
-    // document.getElementById("contact").style.animation = "disappear 3s";
-    // document.getElementById("subscriptions").style.animation = "appear 3s";
-
-    document.getElementById("homeUnderline").style.width = "0";
-    document.getElementById("aboutUsUnderline").style.width = "0";
-    document.getElementById("contactUnderline").style.width = "0";
-    document.getElementById("subscriptionsUnderline").style.width = "100%";
-
-    menuOpened = false;
-    openMenu();
-}
-
-
+let menuOpened = false;
 
 function openMenu() {
-
-    if (menuOpened === true) {
-        document.getElementById("menuLogo").style.top = "0px";
-        menuOpened = false;
-
-    } else if (menuOpened === false) {
-        document.getElementById("menuLogo").style.top = "-225px";
-        menuOpened = true;
-    }
+    menuOpened = !menuOpened;
+    document.getElementById("menuLogo").style.top = menuOpened ? "0px" : "-225px";
 }
+
+

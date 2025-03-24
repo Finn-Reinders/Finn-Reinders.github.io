@@ -19,32 +19,33 @@
     <div id="loader"></div>
 </div>
 <!--CURSOR-->
-<div id="cursor"></div>
+<!--<div id="cursor"></div>-->
+
 <!--TOP BAR-->
 <div id="topBar">
     <div style="top: -225px" id="menuLogo">
         <ul id="menuItemsId">
             <li id="homeButton" class="menuItemsClass">
                 <img class="icons" src="assets/Home.png" alt="Home Icon">
-                <a id="homeLink" class="links" onclick="homePage()">HOME.
+                <a id="homeLink" class="links" onclick="switchPage(`home`)">HOME.
                     <div style="width: 100%" class="underlines" id="homeUnderline"></div>
                 </a>
             </li>
             <li class="menuItemsClass">
                 <img class="icons" src="assets/Subscriptions.png" alt="Subscription Icon">
-                <a class="links" onclick="subscriptionsPage()">SUBSCRIPTIONS.
+                <a class="links" onclick="switchPage(`subscriptions`)">SUBSCRIPTIONS.
                     <div style="width: 0" class="underlines" id="subscriptionsUnderline"></div>
                 </a>
             </li>
             <li class="menuItemsClass">
                 <img class="icons" src="assets/Info.png" alt="Info Icon">
-                <a class="links" onclick="aboutUsPage()">ABOUT US.
+                <a class="links" onclick="switchPage(`aboutUs`)">ABOUT US.
                     <div style="width: 0" class="underlines" id="aboutUsUnderline"></div>
                 </a>
             </li>
             <li class="menuItemsClass">
                 <img class="icons" src="assets/Contact.png" alt="Contact Icon">
-                <a class="links" onclick="contactPage()">CONTACT.
+                <a class="links" onclick="switchPage(`contact`)">CONTACT.
                     <div style="width: 0" class="underlines" id="contactUnderline"></div>
                 </a>
             </li>
@@ -69,29 +70,29 @@
     <div class="item" id="item10"><img class="logo" id="jurassicParkLogo" src="assets/JurassicParkLogo" alt="Jurassic Park LOGO"><img id="owenGrady" class="images" src="assets/OwenGrady.png" alt="Owen Grady"></div>
 </div>
 
+<!--SUBSCRIPTIONS PAGE-->
+<div id="subscriptions" style="display: none;">
+        <div class="header"><h1 class="headerText">SUBSCRIPTIONS.</h1></div>
+    <div class="container">
+        <div class="wrapper"></div>
+    </div>
+</div>
+
 <!--ABOUT US PAGE-->
 <div id="aboutUs" style="display: none;">
+    <div class="header"><h1 class="headerText">ABOUT US.</h1></div>
+    <div class="container">
 
+    </div>
 </div>
 
 <!--CONTACT PAGE-->
 <div id="contact" style="display: none;" >
+    <div class="header"><h1 class="headerText">CONTACT.</h1></div>
+    <div class="container">
 
-</div>
-
-<!--SUBSCRIPTIONS PAGE-->
-<div id="subscriptions" style="display: none;" >
-    <div id="subscriptionsContainer">
-            <div class="content">
-                <h1 class="headers">STANDARD.</h1>
-            </div>
-            <div class="content">
-                <h1 class="headers">PREMIUM.</h1>
-            </div>
-            <div class="content">
-                <h1 class="headers">FAMILY.</h1>
-            </div>
     </div>
+</div>
 </div>
 </body>
 </html>
