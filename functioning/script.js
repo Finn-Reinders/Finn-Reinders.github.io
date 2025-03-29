@@ -122,4 +122,15 @@ function openMenu() {
     document.getElementById("menuLogo").style.top = menuOpened ? "0px" : "-225px";
 }
 
+let divOpened = false;
 
+function clickedDiv() {
+    console.log("function called");
+    divOpened = !divOpened; 
+
+    const enlargedDiv = document.querySelector(".item.enlarged");
+    if (enlargedDiv) {
+        enlargedDiv.style.minWidth = divOpened ? "98%" : "calc((100% / 5) - 8px)";
+        enlargedDiv.style.zIndex = divOpened ? "10000" : "1"; 
+}
+}
