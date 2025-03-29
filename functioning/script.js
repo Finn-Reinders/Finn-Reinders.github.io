@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let clone = item.cloneNode(true);
             home.appendChild(clone);
         });
+
+        home.scrollLeft = home.scrollWidth / 2;
     }
 
     duplicateItems();
@@ -86,8 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function fadeBackground(newGradient) {
-        background.style.opacity = "0";
+        if (divOpened) {
 
+            background.style.background = newGradient;
+            return;
+        }
+        
+        background.style.opacity = "0";
         setTimeout(() => {
             background.style.background = newGradient;
             background.style.opacity = "1";
@@ -95,6 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     updateCenterItem();
+
+
+    document.addEventListener("keydown", (event) => {
+        if ((event.key === "ArrowLeft" || event.key === "ArrowRight") && divOpened) {
+            event.preventDefault();
+        }
+    });
 });
 
 function switchPage(page) {
@@ -122,8 +136,8 @@ function openMenu() {
     document.getElementById("menuLogo").style.top = menuOpened ? "0px" : "-225px";
 }
 
-let divOpened = false;
 
+let divOpened = false;
 function clickedDiv() {
     console.log("function called");
     divOpened = !divOpened; 
@@ -131,6 +145,24 @@ function clickedDiv() {
     const enlargedDiv = document.querySelector(".item.enlarged");
     if (enlargedDiv) {
         enlargedDiv.style.minWidth = divOpened ? "98%" : "calc((100% / 5) - 8px)";
-        enlargedDiv.style.zIndex = divOpened ? "10000" : "1"; 
+        enlargedDiv.style.zIndex = "1";
+    }
+    const logos = document.querySelectorAll(".logo");
+    if (enlargedDiv.style.minWidth == "98%") {
+        logos.forEach(logo => {
+            logo.style.width = "30%"; 
+            logo.style.right = "0%";
+            logo.style.top = "0%";
+        });
+        document.getElementById("home").style.overflowX = "hidden";
+        console.log("Width changed to 30%");
+    } else {
+        logos.forEach(logo => {
+            logo.style.width = "100%"; 
+            home.style.overflowX = "scroll";
+        });
+        
+    }
+    
 }
-}
+

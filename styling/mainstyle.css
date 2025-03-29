@@ -4,7 +4,6 @@ body {
     overflow: hidden;
     user-select: none;
     -webkit-user-drag: none;
-    /*cursor: none;*/
     flex-direction: column;
 }
 
@@ -238,7 +237,6 @@ body {
 
 .item
 {
-
     background-color: rgba(0, 0, 0, 0.48);
     height: 95%;
     border-radius: 10px;
@@ -248,14 +246,18 @@ body {
     scroll-snap-align: center;
     overflow: hidden;
     scale: 1;
-    /*cursor: pointer;*/
 }
 
 .item.enlarged
 {
-    transform: scale(1.03);
+    scale: 1.03;
     transition: ease 0.5s;
-    box-shadow: 0 8px 10px black;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.516);
+
+    @media (min-width: 98%)
+    {
+        border: #000000 50px solid;
+    }
 }
 
 .images
@@ -352,6 +354,7 @@ body {
     max-width: 100%;
     max-height: 500px;
     -webkit-user-drag: none;
+    transition: width 1s ease;
 }
 
 #starWarsLogo
