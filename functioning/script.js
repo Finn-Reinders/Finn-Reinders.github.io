@@ -145,24 +145,20 @@ function clickedDiv() {
     const enlargedDiv = document.querySelector(".item.enlarged");
     if (enlargedDiv) {
         enlargedDiv.style.minWidth = divOpened ? "98%" : "calc((100% / 5) - 8px)";
-        enlargedDiv.style.zIndex = "1";
+        enlargedDiv.style.zIndex = divOpened ? "2" : "1";
     }
     const logos = document.querySelectorAll(".logo");
     if (enlargedDiv.style.minWidth == "98%") {
         logos.forEach(logo => {
             logo.style.width = "30%"; 
-            logo.style.right = "0%";
-            logo.style.top = "0%";
+            logo.style.marginLeft = "auto";
         });
         document.getElementById("home").style.overflowX = "hidden";
         console.log("Width changed to 30%");
     } else {
         logos.forEach(logo => {
-            logo.style.width = "100%"; 
+            logo.style.width = "90%"; 
             home.style.overflowX = "scroll";
-        });
-        
+        });   
     }
-    
 }
-
