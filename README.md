@@ -1,1 +1,1 @@
-Hello my name is Finn Reinders and this is my ambition project.
+Hello my name is Finn Reinders and this is my Shine project!
