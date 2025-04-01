@@ -354,7 +354,7 @@ body {
     max-width: 100%;
     max-height: 500px;
     -webkit-user-drag: none;
-    transition: width 1s ease;
+    transition: 1s ease;
 }
 
 #starWarsLogo
@@ -758,4 +758,3 @@ body {
     text-align: center;
     margin: 0;
 }
-

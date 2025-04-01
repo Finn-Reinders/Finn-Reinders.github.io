@@ -151,14 +151,14 @@ function clickedDiv() {
     if (enlargedDiv.style.minWidth == "98%") {
         logos.forEach(logo => {
             logo.style.width = "30%"; 
-            logo.style.marginLeft = "auto";
+            logo.style.marginRight = "10%";
         });
         document.getElementById("home").style.overflowX = "hidden";
-        console.log("Width changed to 30%");
     } else {
         logos.forEach(logo => {
             logo.style.width = "90%"; 
             home.style.overflowX = "scroll";
+            logo.style.marginRight = "auto";
         });   
     }
 }
