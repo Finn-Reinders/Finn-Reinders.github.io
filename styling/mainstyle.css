@@ -349,7 +349,7 @@ body {
 
 .logo
 {
-    display: block;
+    display: flex;
     margin: auto;
     max-width: 100%;
     max-height: 500px;
