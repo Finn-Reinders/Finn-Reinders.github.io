@@ -138,27 +138,30 @@ function openMenu() {
 
 
 let divOpened = false;
+const video = document.querySelectorAll(".vid");
 function clickedDiv() {
     console.log("function called");
     divOpened = !divOpened; 
 
     const enlargedDiv = document.querySelector(".item.enlarged");
+    const home = document.getElementById("home");
+    const logos = document.querySelectorAll(".logo");
+    const videos = document.querySelectorAll(".vid");
+    
     if (enlargedDiv) {
         enlargedDiv.style.minWidth = divOpened ? "98%" : "calc((100% / 5) - 8px)";
         enlargedDiv.style.zIndex = divOpened ? "2" : "1";
-    }
-    const logos = document.querySelectorAll(".logo");
-    if (enlargedDiv.style.minWidth == "98%") {
-        logos.forEach(logo => {
-            logo.style.width = "30%"; 
-            logo.style.marginRight = "10%";
-        });
-        document.getElementById("home").style.overflowX = "hidden";
-    } else {
-        logos.forEach(logo => {
-            logo.style.width = "90%"; 
-            home.style.overflowX = "scroll";
-            logo.style.marginRight = "auto";
-        });   
+        home.style.overflowX = divOpened ? "hidden" : "scroll";
+    logos.forEach(logo => {
+        setTimeout(() => {
+            logo.style.transform = divOpened ? "translateX(80%)" : "translateX(0)";
+        }, 750);
+        logo.style.width = divOpened ? "30%" : "90%";
+    });
+    videos.forEach(vid => {
+        setTimeout(() => {
+            vid.style.opacity = divOpened ? "1" : "0";
+        }, 1200);
+    });
     }
 }

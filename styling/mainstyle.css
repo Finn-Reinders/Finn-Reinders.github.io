@@ -368,6 +368,7 @@ body {
     position: absolute;
     width: 30vw;
     bottom: calc(0% - 25vw);
+    left: calc(75% - 15vw);
 }
 
 #indianaJonesLogo
@@ -757,4 +758,16 @@ body {
     -webkit-background-clip: text;
     text-align: center;
     margin: 0;
+}
+
+.vid
+{
+    width: 50%;
+    left: 5%;
+    top: 5%;
+    z-index: 10;
+    background-color: #000000;
+    position: absolute;
+    border-radius: 20px;
+    transition: opacity 1s, visibility 1s;
 }
