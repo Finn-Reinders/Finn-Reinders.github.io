@@ -253,11 +253,6 @@ body {
     scale: 1.03;
     transition: ease 0.5s;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.516);
-
-    @media (min-width: 98%)
-    {
-        border: #000000 50px solid;
-    }
 }
 
 .images
@@ -311,7 +306,7 @@ body {
 
 #item6
 {
-    background-image: url(../assets/ToyStoryBackground.png);
+    background-image: url(../assets/ToyStoryRoom.jpg);
     background-size: cover;
     background-position: left;
     position: relative;
@@ -321,7 +316,7 @@ body {
 {
     background-image: url(../assets/GhostbustersBackground.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 
 #item8
@@ -450,7 +445,7 @@ body {
 {
     position: absolute;
     width: 14vw;
-    left: calc(40%);
+    left: calc(75% - 7vw);
     top: calc(75% - 10vw);
 }
 
@@ -491,9 +486,9 @@ body {
 #owenGrady
 {
     position: absolute;
-    width: 14vw;
-    left: calc(75% - 5vw);
-    top: calc(75% - 10vw);
+    width: 40vw;
+    left: calc(75% - 20vw);
+    top: calc(75% - 15vw);
 }
 
 @media (max-width: 1300px)

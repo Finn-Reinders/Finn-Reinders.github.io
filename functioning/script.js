@@ -152,16 +152,27 @@ function clickedDiv() {
         enlargedDiv.style.minWidth = divOpened ? "98%" : "calc((100% / 5) - 8px)";
         enlargedDiv.style.zIndex = divOpened ? "2" : "1";
         home.style.overflowX = divOpened ? "hidden" : "scroll";
-    logos.forEach(logo => {
-        setTimeout(() => {
-            logo.style.transform = divOpened ? "translateX(80%)" : "translateX(0)";
-        }, 750);
-        logo.style.width = divOpened ? "30%" : "90%";
-    });
-    videos.forEach(vid => {
-        setTimeout(() => {
-            vid.style.opacity = divOpened ? "1" : "0";
-        }, 1200);
-    });
+
+        logos.forEach(logo => {
+            if (divOpened) {
+                setTimeout(() => {
+                    logo.style.transform = "translateX(80%)";
+                }, 1000);
+                logo.style.width = "30%";
+            } else {
+                logo.style.transform = "translateX(0)";
+                logo.style.width = "90%";
+            }
+        });
+
+        videos.forEach(vid => {
+            if (divOpened) {
+                setTimeout(() => {
+                    vid.style.opacity = "1";
+                }, 1200);
+            } else {
+                vid.style.opacity = "0";
+            }
+        });
     }
 }
