@@ -287,6 +287,7 @@ body {
     background-image: url(../assets/AvengersTower.jpg);
     background-size: cover;
     position: relative;
+    background-position: center;
 }
 
 #item4
@@ -764,5 +765,5 @@ body {
     background-color: #000000;
     position: absolute;
     border-radius: 20px;
-    transition: opacity 1s, visibility 1s;
+    transition: opacity 1s, width 1s, visibility 1s;
 }

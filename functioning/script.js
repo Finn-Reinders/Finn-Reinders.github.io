@@ -171,7 +171,7 @@ function clickedDiv() {
                     vid.style.opacity = "1";
                 }, 1200);
             } else {
-                vid.style.opacity = "0";
+               vid.style.opacity = "0";
             }
         });
     }
