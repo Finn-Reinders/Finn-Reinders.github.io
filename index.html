@@ -18,8 +18,6 @@
 <div id="loaderScreen">
     <div id="loader"></div>
 </div>
-<!--CURSOR-->
-<!--<div id="cursor"></div>-->
 
 <!--TOP BAR-->
 <div id="topBar">
@@ -56,94 +54,91 @@
 </div>
 
 <!--HOME PAGE-->
-<div id="home" style="display: flex;">
+<div id="home" class="page" style="display: flex;">
     <div id="background"></div>
     <!-- STAR WARS -->
     <div onclick="clickedDiv()" class="item" id="item1">
-        <video src="assets/StarWarsTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen" controls></video>
+        <video data-src="assets/StarWarsTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen" controls></video>
         <img class="logo" id="starWarsLogo" src="assets/StarWarsLogo.png" alt="Star Wars LOGO">
         <img class="images" id="darthVader" src="assets/DarthVader.png" alt="Darth Vader">
     </div>
     <!-- IRONMAN -->
     <div onclick="clickedDiv()" class="item" id="item3">
-        <video src="assets/IronManTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/IronManTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="marvelLogo" src="assets/MarvelLogo.png" alt="Marvel LOGO">
         <img id="ironMan" class="images" src="assets/IronMan.png" alt="Iron Man">
     </div>
     <!-- INDIANA JONES -->
     <div onclick="clickedDiv()" class="item" id="item2">
-        <video src="assets/IndianaJonesTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/IndianaJonesTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="indianaJonesLogo" src="assets/IndianaJonesLogo.png" alt="Indiana Jones LOGO">
         <img id="indianaJones" class="images" src="assets/IndianaJones.png" alt="Indiana Jones">
     </div>
     <!-- PIRATES OF THE CARIBBEAN -->
     <div onclick="clickedDiv()" class="item" id="item4">
-        <video src="assets/PiratesOfTheCarribeanTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/PiratesOfTheCarribeanTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="piratesOfTheCaribbeanLogo" src="assets/PiratesOfTheCaribbeanLogo.png" alt="Pirates of the Caribbean LOGO">
         <img id="jackSparrow" class="images" src="assets/JackSparrow.png" alt="">
     </div>
     <!-- THE LORD OF THE RINGS -->
     <div onclick="clickedDiv()" class="item" id="item5">
-        <video src="assets/TheLordOfTheRingsTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/TheLordOfTheRingsTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="theLordOfTheRingsLogo" src="assets/LordOfTheRingsLogo.png" alt="">
         <img id="gandalf" class="images" src="assets/Gandalf.png" alt="">
     </div>
     <!-- TOY STORY -->
     <div onclick="clickedDiv()" class="item" id="item6">
-        <video src="assets/ToyStoryTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/ToyStoryTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="toyStoryLogo" src="assets/ToyStoryLogo.png" alt="">
         <img class="images" id="woody" src="assets/Woody.png" alt="">
     </div>
     <!-- GHOSTBUSTERS -->
     <div onclick="clickedDiv()" class="item" id="item7">
-        <video src="assets/GhostbustersTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/GhostbustersTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="ghostbustersLogo" src="assets/GhostbustersLogo.png" alt="Ghostbusters LOGO">
         <img id="peterVenkman" class="images" src="assets/PeterVenkman.png" alt="Peter Venkman">
     </div>
     <!-- BATMAN -->
     <div onclick="clickedDiv()" class="item" id="item8">
-        <video src="assets/BatmanTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/BatmanTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="batmanLogo" src="assets/BatmanLogo.png" alt="Batman LOGO">
         <img id="batman" class="images" src="assets/Batman.png" alt="Batman">
     </div>
     <!-- PLANET OF THE APES -->
     <div onclick="clickedDiv()" class="item" id="item9">
-        <video src="assets/PlanetOfTheApesTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/PlanetOfTheApesTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="planetOfTheApesLogo" src="assets/PlanetOfTheApesLogo.png" alt="Planet Of The Apes LOGO">
         <img id="caesar" class="images" src="assets/Caesar.png" alt="Caesar">
     </div>
     <!-- JURASSIC PARK -->
     <div onclick="clickedDiv()" class="item" id="item10">
-        <video src="assets/JurassicParkTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
+        <video data-src="assets/JurassicParkTrailer.mp4" class="vid" style="opacity: 0;" type="video/mp4" controls disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen"></video>
         <img class="logo" id="jurassicParkLogo" src="assets/JurassicParkLogo" alt="Jurassic Park LOGO">
         <img id="owenGrady" class="images" src="assets/OwenGrady.png" alt="Owen Grady"></div>
 </div>
 
 <!--SUBSCRIPTIONS PAGE-->
-<div id="subscriptions" style="display: none;">
-        <div class="header"><h1 class="headerText">SUBSCRIPTIONS.</h1></div>
-    <div class="container">
-        <div class="wrapper">
-            <h2 class="subscriptionHeader">REGULAR.</h2>
-            <h2 class="subscriptionHeader">PREMIUM.</h2>
-            <h2 class="subscriptionHeader">FAMILY.</h2>
-        </div>
+<div id="subscriptions" class="page" style="display: none;">
+    <div id="plans">
+        <div id="plan1"><img src="" alt=""></div>
+        <div id="plan3"><img class="planIcons" src="assets/lightning.png" alt=""></div>
+        <div id="plan2"></div>
     </div>
 </div>
 
 <!--ABOUT US PAGE-->
-<div id="aboutUs" style="display: none;">
+<div id="aboutUs" class="page" style="display: none;">
     <div class="header"><h1 class="headerText">ABOUT US.</h1></div>
     <div class="container">
-
     </div>
 </div>
 
 <!--CONTACT PAGE-->
-<div id="contact" style="display: none;" >
+<div id="contact" class="page" style="display: none;" >
     <div class="header"><h1 class="headerText">CONTACT.</h1></div>
     <div class="container">
-
+        <div class="openButton" onclick="openForm()"></div>
+        <div id="form"></div>
     </div>
 </div>
 </div>

@@ -1,3 +1,11 @@
+:root
+{
+    --background-color: #000000;
+    --text-color: #E3E3E3;
+    --hover-color: #ffffff;
+    --border-radius: 10px;
+}
+
 body {
     display: flex;
     margin: 0;
@@ -766,4 +774,73 @@ body {
     position: absolute;
     border-radius: 20px;
     transition: opacity 1s, width 1s, visibility 1s;
+}
+
+.page
+{
+    transition: ease 1s;
+}
+
+.openButton
+{
+    background-color: black;
+    width: 100px;
+    height: 50px;
+}
+
+.form
+{
+    display: none;
+    opacity: 0;
+}
+
+.form.open
+{
+    animation: openForm 1s ease forwards;
+}
+
+@keyframes openForm
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#plans
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#plans div
+{
+    display: inline-block;
+    align-items: center;
+    margin: 0;
+    width: 15vw;
+    height: 40vh;
+    margin-top: 400px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: transparent;
+    border: rgb(79, 79, 79) solid 5px;
+    overflow: hidden;
+}
+
+.planIcons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.7;
 }

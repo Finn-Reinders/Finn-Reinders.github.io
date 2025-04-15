@@ -140,9 +140,7 @@ function openMenu() {
 let divOpened = false;
 const video = document.querySelectorAll(".vid");
 function clickedDiv() {
-    console.log("function called");
     divOpened = !divOpened; 
-
     const enlargedDiv = document.querySelector(".item.enlarged");
     const home = document.getElementById("home");
     const logos = document.querySelectorAll(".logo");
@@ -165,14 +163,32 @@ function clickedDiv() {
             }
         });
 
-        videos.forEach(vid => {
+        // Modified video handling
+        videos.forEach(video => {
             if (divOpened) {
-                setTimeout(() => {
-                    vid.style.opacity = "1";
-                }, 1200);
+                // Load the video when div is opened
+                if (video.closest('.item') === enlargedDiv) {
+                    const videoSrc = video.getAttribute('data-src');
+                    if (videoSrc && !video.src) {
+                        video.src = videoSrc;
+                    }
+                    setTimeout(() => {
+                        video.style.opacity = "1";
+                    }, 1200);
+                }
             } else {
-               vid.style.opacity = "0";
+                // Reset video when div is closed
+                video.style.opacity = "0";
+                setTimeout(() => {
+                    video.src = '';
+                }, 500); // Wait for fade out before removing source
             }
         });
     }
+}
+
+function openForm(){
+    const form = document.getElementById("form");
+
+    form.classList.add = "open";
 }
