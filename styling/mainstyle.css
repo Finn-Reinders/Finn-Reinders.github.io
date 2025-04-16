@@ -6,13 +6,24 @@
     --border-radius: 10px;
 }
 
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling by default */
+    height: auto; /* Change from fixed height to auto */
+}
+
 body {
     display: flex;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
     user-select: none;
     -webkit-user-drag: none;
     flex-direction: column;
+    min-height: 100vh;
+    height: auto; /* Change from fixed height to auto */
 }
 
 #cursor
@@ -236,6 +247,7 @@ body {
     align-items: center;
     gap: 10px;
     overflow-x: scroll;
+    overflow-y: hidden;
     width: 100%;
     height: calc(100vh - 75px);
     padding: 20px;
@@ -686,9 +698,10 @@ body {
     }
     .page {
         min-width: 0;
-        min-height: 100vh;
+        min-height: calc(100vh - 75px);
+        height: auto;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto !important;
     }
     /* Stack contact page columns vertically */
     #contact > div[style*="display: flex"] {
@@ -704,6 +717,8 @@ body {
         min-height: 300px;
         height: auto !important;
         box-sizing: border-box;
+        max-height: none;
+        overflow-y: visible;
     }
     #contact .header {
         margin: 30px auto 10px auto !important;
@@ -729,6 +744,11 @@ body {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    #topBar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 }
 
 /* More specific breakpoint for very small devices */
@@ -747,11 +767,14 @@ body {
 #subscriptions
 {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: calc(100vh - 75px);
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding-bottom: 40px;
 }
 
 .subscriptionsBackground
@@ -784,13 +807,13 @@ body {
 .container
 {
     background: radial-gradient(circle, rgba(0,0,0,0.55906869583771) 0%, rgb(32, 32, 32) 100%);    
-    height: 100vh;
-    border-radius: 50px 50px 0 0;
+    min-height: 100vh;
+    border-radius: 50px;
     width: 60%;
     padding: 20px;
     margin-left: 20px;
-
-
+    margin-bottom: 40px;
+    height: auto;
 }
 
 p{
@@ -823,18 +846,26 @@ iframe
 #aboutUs
 {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: calc(100vh - 75px);
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding-bottom: 40px;
 }
 
 #contact
 {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: calc(100vh - 75px);
     display: flex;
     flex-direction: column;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding-bottom: 40px;
 }
 
 .wrapper
@@ -877,6 +908,10 @@ iframe
 .page
 {
     transition: ease 1s;
+    height: auto;
+    min-height: calc(100vh - 75px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .openButton
@@ -917,6 +952,7 @@ iframe
     justify-content: center;
     gap: 30px;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
 #plans div
@@ -1118,12 +1154,14 @@ iframe
     display: flex;
     padding: 30px;
     flex-direction: column;
-    margin: 0 20px 0 20px;
+    margin: 0 20px 40px 20px;
     border-radius: 40px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background: radial-gradient(circle, rgba(0,0,0,0.55906869583771) 0%, rgb(32, 32, 32) 100%);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-height: none;
 }
 
 .contactInfo h2 {
@@ -1162,14 +1200,6 @@ iframe
 
 .contactInfo a:hover .contactIcons {
     transform: scale(1.1);
-}
-
-html, body {
-    width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden; /* Only allow scrolling on mobile */
-    /* Enable vertical scrolling on mobile */
 }
 
 /* Sign Up Popup */
