@@ -718,6 +718,28 @@ body {
         justify-content: center !important;
         align-items: center !important;
         width: 90% !important;
+        height: auto !important;
+        padding: 15px 0;
+    }
+    .headerText {
+        font-size: 3em !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* More specific breakpoint for very small devices */
+@media (max-width: 400px) {
+    .headerText {
+        font-size: 2.5em !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header {
+        padding: 10px 0;
     }
 }
 
@@ -755,6 +777,8 @@ body {
     display: flex;
     margin: 30px 0 10px 30px;
     width: fit-content;
+    max-width: 90%;
+    overflow: hidden;
 }
 
 .container
@@ -793,6 +817,7 @@ iframe
     margin: auto;
     padding-left: 50px;
     padding-right: 50px;
+    white-space: nowrap;
 }
 
 #aboutUs
