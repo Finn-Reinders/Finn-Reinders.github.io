@@ -205,3 +205,43 @@ function openForm(){
 
     form.classList.add = "open";
 }
+
+// Show popup function
+function showPopup() {
+    const overlay = document.getElementById('popupOverlay');
+    const content = document.getElementById('popupContent');
+    
+    // Add active class to overlay
+    overlay.classList.add('active');
+    
+    // Remove any previous animation classes
+    content.classList.remove('leaving');
+    
+    // Add entering animation
+    content.classList.add('entering');
+}
+
+// Hide popup function
+function hidePopup() {
+    const overlay = document.getElementById('popupOverlay');
+    const content = document.getElementById('popupContent');
+    
+    // Add leaving animation
+    content.classList.remove('entering');
+    content.classList.add('leaving');
+    
+    // Wait for animation to finish before hiding overlay
+    setTimeout(() => {
+        overlay.classList.remove('active');
+    }, 300);
+}
+
+// Close popup when clicking outside content
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('popupOverlay');
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            hidePopup();
+        }
+    });
+});
