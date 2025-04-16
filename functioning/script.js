@@ -176,25 +176,36 @@ function clickedDiv() {
             }
         });
 
-        // Modified video handling
+        // Improved video handling - only load the specific video for the enlarged div
         videos.forEach(video => {
-            if (divOpened) {
-                // Load the video when div is opened
-                if (video.closest('.item') === enlargedDiv) {
-                    const videoSrc = video.getAttribute('data-src');
-                    if (videoSrc && !video.src) {
-                        video.src = videoSrc;
-                    }
+            // Get parent item of this video
+            const parentItem = video.closest('.item');
+            
+            if (divOpened && parentItem === enlargedDiv) {
+                // Only load and show video for the currently opened div
+                const videoSrc = video.getAttribute('data-src');
+                if (videoSrc) {
+                    console.log("Loading video:", videoSrc);
+                    video.src = videoSrc;
+                    video.load(); // Ensure the video loads
+                    
+                    // Fade in the video after a short delay
                     setTimeout(() => {
                         video.style.opacity = "1";
                     }, 1200);
                 }
             } else {
-                // Reset video when div is closed
+                // Hide and unload videos that aren't in the current div
                 video.style.opacity = "0";
-                setTimeout(() => {
-                    video.src = '';
-                }, 500); // Wait for fade out before removing source
+                
+                // Only unload after fade out animation is complete
+                if (!divOpened || parentItem !== enlargedDiv) {
+                    setTimeout(() => {
+                        video.src = '';
+                        video.removeAttribute('src'); // Completely remove the source
+                        video.load(); // Reset the video element
+                    }, 500);
+                }
             }
         });
     }
