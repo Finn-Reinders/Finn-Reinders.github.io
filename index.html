@@ -119,28 +119,118 @@
 
 <!--SUBSCRIPTIONS PAGE-->
 <div id="subscriptions" class="page" style="display: none;">
+    <div id="subscriptionsBackground"></div>
     <div id="plans">
-        <div id="plan1"><img src="" alt=""></div>
-        <div id="plan3"><img class="planIcons" src="assets/lightning.png" alt=""></div>
-        <div id="plan2"></div>
+        <div id="plan1">
+            <h1 class="planHeader">Basic Plan.</h1>
+            <ul class="planList">
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-360h60v-80h80v80h60v-240h-60v100h-80v-100h-60v240Zm280 0h160q17 0 28.5-11.5T720-400v-160q0-17-11.5-28.5T680-600H520v240Zm60-60v-120h80v120h-80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg> HD Streaming (720p)</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-440H200v440Z"/></svg> Limited Ads</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"/></svg> Stream on 1 Device</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m791-55-91-91q-48 32-103.5 49T480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-61 17-116.5T146-700l-91-91 57-57 736 736-57 57ZM412-168q26-51 62-81.5t75-47.5L204-642q-21 36-32.5 76.5T160-480q0 45 11.5 86t34.5 76q41-20 85-31t89-11q32 0 61.5 5.5T500-340q-23 12-43.5 28T418-278q-12-2-20.5-2H380q-32 0-63.5 7T256-252q32 32 71.5 53.5T412-168Zm402-92-58-58q21-35 32.5-76t11.5-86q0-134-93-227t-227-93q-45 0-85.5 11.5T318-756l-58-58q48-32 103.5-49T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 61-17 116.5T814-260ZM520-554 374-700q62-2 105 41.5T520-554ZM380-420q-58 0-99-41t-41-99q0-33 14.5-60.5T292-668l196 196q-20 23-47.5 37.5T380-420Zm310 36L564-510q10-31 36-50.5t60-19.5q42 0 71 29t29 71q0 34-19.5 60T690-384ZM537-537ZM423-423Z"/></svg> No Parental Controls</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg> Create up to 3 Profiles</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg> Standard Support</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg> Access to Core Content Library</li>
+            </ul>
+        </div>
+        
+        <div id="plan2">
+            <h1 class="planHeader">Premium Plan.</h1>
+            <ul class="planList">
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-360h60v-90l70 90h73l-93-120 93-120h-73l-70 90v-90h-60v240Zm-140 0h60v-60h40v-60h-40v-120h-60v120h-60v-120h-60v180h120v60ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg> Ultra HD / 4K + HDR Streaming</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m791-56-64-64H200q-33 0-56.5-23.5T120-200v-527l-64-65 56-56 736 736-57 56ZM200-200h447L200-647v447Zm640-33-80-80v-327H433L233-840h527q33 0 56.5 23.5T840-760v527Z"/></svg> Ad-Free Viewing</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"/></svg> Stream on 2 Devices</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M412-168q45-91 120-121.5T660-320q23 0 45 4t43 10q24-38 38-82t14-92q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 45 11.5 86t34.5 76q41-20 85-31t89-11q32 0 61.5 5.5T500-340q-23 12-43.5 28T418-278q-12-2-20.5-2H380q-32 0-63.5 7T256-252q32 32 71.5 53.5T412-168Zm68 88q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM380-420q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T440-560q0-25-17.5-42.5T380-620q-25 0-42.5 17.5T320-560q0 25 17.5 42.5T380-500Zm280 120q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM480-480Z"/></svg> Basic Parental Controls</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M790-56 414-434q-47 11-87.5 33T254-346l-84-86q32-32 69-56t79-42l-90-90q-41 21-76.5 46.5T84-516L0-602q32-32 66.5-57.5T140-708l-84-84 56-56 736 736-58 56Zm-310-64q-42 0-71-29.5T380-220q0-42 29-71t71-29q42 0 71 29t29 71q0 41-29 70.5T480-120Zm236-238-29-29-29-29-144-144q81 8 151.5 41T790-432l-74 74Zm160-158q-77-77-178.5-120.5T480-680q-21 0-40.5 1.5T400-674L298-776q44-12 89.5-18t92.5-6q142 0 265 53t215 145l-84 86Z"/></svg> Offline Downloads on 2 Devices</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg> Create up to 5 Profiles</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg> Priority Support</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg> Early Access to New Releases</li>
+            </ul>
+        </div>
+        
+        <div id="plan3">
+            <h1 class="planHeader">Family Plan.</h1>
+            <ul class="planList">
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-360h60v-90l70 90h73l-93-120 93-120h-73l-70 90v-90h-60v240Zm-140 0h60v-60h40v-60h-40v-120h-60v120h-60v-120h-60v180h120v60ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg> Ultra HD / 4K + HDR Streaming</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m791-56-64-64H200q-33 0-56.5-23.5T120-200v-527l-64-65 56-56 736 736-57 56ZM200-200h447L200-647v447Zm640-33-80-80v-327H433L233-840h527q33 0 56.5 23.5T840-760v527Z"/></svg> Completely Ad-Free</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"/></svg> Stream on up to 4 Devices</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M412-168q45-91 120-121.5T660-320q23 0 45 4t43 10q24-38 38-82t14-92q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 45 11.5 86t34.5 76q41-20 85-31t89-11q32 0 61.5 5.5T500-340q-23 12-43.5 28T418-278q-12-2-20.5-2H380q-32 0-63.5 7T256-252q32 32 71.5 53.5T412-168Zm68 88q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM380-420q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T440-560q0-25-17.5-42.5T380-620q-25 0-42.5 17.5T320-560q0 25 17.5 42.5T380-500Zm280 120q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM480-480Z"/></svg> Parental Controls</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M790-56 414-434q-47 11-87.5 33T254-346l-84-86q32-32 69-56t79-42l-90-90q-41 21-76.5 46.5T84-516L0-602q32-32 66.5-57.5T140-708l-84-84 56-56 736 736-58 56Zm-310-64q-42 0-71-29.5T380-220q0-42 29-71t71-29q42 0 71 29t29 71q0 41-29 70.5T480-120Zm236-238-29-29-29-29-144-144q81 8 151.5 41T790-432l-74 74Zm160-158q-77-77-178.5-120.5T480-680q-21 0-40.5 1.5T400-674L298-776q44-12 89.5-18t92.5-6q142 0 265 53t215 145l-84 86Z"/></svg> Offline Downloads on up to 4 Devices</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg> Create up to 8 Profiles</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg> Premium Support (24/7)</li>
+                <li class="planLi"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg> Early Access to New Releases</li>
+            </ul>
+        </div>
+        
     </div>
 </div>
 
 <!--ABOUT US PAGE-->
 <div id="aboutUs" class="page" style="display: none;">
-    <div class="header"><h1 class="headerText">ABOUT US.</h1></div>
-    <div class="container">
+    <div class="header">
+        <h1 class="headerText">ABOUT US.</h1>
+    </div>
+    <div class="container" style="border-radius: 40px; padding: 40px 20px; background: rgba(0,0,0,0.7); max-width: 900px; margin: 30px auto;">
+        <section style="margin-bottom: 40px;">
+            <h2 style="color: #fff; font-family: Roboto, sans-serif; font-size: 2.2em; margin-bottom: 10px;">Our Mission</h2>
+            <p style="color: #e3e3e3; font-size: 1.2em; line-height: 1.6;">
+                At THE HUB, our mission is to unite fans of iconic characters and universes in one immersive platform. We celebrate stories from Star Wars, Marvel, and beyond, providing a space to explore, connect, and share your passion.
+            </p>
+        </section>
+        <section>
+            <h2 style="color: #fff; font-family: Roboto, sans-serif; font-size: 2em; margin-bottom: 20px;">Meet the Team</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                <div style="flex: 1 1 220px; max-width: 220px; background: rgba(30,30,30,0.8); border-radius: 20px; padding: 20px; text-align: center;">
+                    <img src="assets/team1.png" alt="Finn R." style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                    <h3 style="color: #fff; margin: 10px 0 5px 0;">Finn R.</h3>
+                    <p style="color: #bdbdbd; font-size: 1em;">Founder & Lead Developer</p>
+                    <p style="color: #e3e3e3; font-size: 0.95em;">Loves coding, sci-fi, and building digital experiences for fans everywhere.</p>
+                </div>
+                <div style="flex: 1 1 220px; max-width: 220px; background: rgba(30,30,30,0.8); border-radius: 20px; padding: 20px; text-align: center;">
+                    <img src="assets/team2.png" alt="Alex J." style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                    <h3 style="color: #fff; margin: 10px 0 5px 0;">Alex J.</h3>
+                    <p style="color: #bdbdbd; font-size: 1em;">UI/UX Designer</p>
+                    <p style="color: #e3e3e3; font-size: 0.95em;">Designs intuitive, beautiful interfaces and ensures a smooth user journey.</p>
+                </div>
+                <div style="flex: 1 1 220px; max-width: 220px; background: rgba(30,30,30,0.8); border-radius: 20px; padding: 20px; text-align: center;">
+                    <img src="assets/team3.png" alt="Sam K." style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                    <h3 style="color: #fff; margin: 10px 0 5px 0;">Sam K.</h3>
+                    <p style="color: #bdbdbd; font-size: 1em;">Content Curator</p>
+                    <p style="color: #e3e3e3; font-size: 0.95em;">Finds and organizes the best content from across the multiverse.</p>
+                </div>
+            </div>
+        </section>
+        <section style="margin-top: 40px;">
+            <h2 style="color: #fff; font-family: Roboto, sans-serif; font-size: 2em; margin-bottom: 10px;">Our Values</h2>
+            <ul style="color: #e3e3e3; font-size: 1.1em; line-height: 1.7; padding-left: 20px;">
+                <li>Community: We foster a welcoming and inclusive environment for all fans.</li>
+                <li>Creativity: We encourage imagination and celebrate the art of storytelling.</li>
+                <li>Quality: We are committed to delivering a seamless and enjoyable experience.</li>
+                <li>Integrity: We respect creators, fans, and the universes we represent.</li>
+            </ul>
+        </section>
     </div>
 </div>
 
 <!--CONTACT PAGE-->
-<div id="contact" class="page" style="display: none;" >
-    <div class="header"><h1 class="headerText">CONTACT.</h1></div>
-    <div class="container">
-        <div class="openButton" onclick="openForm()"></div>
-        <div id="form"></div>
+<div id="contact" class="page" style="display: none;">
+    <div class="header">
+        <h1 class="headerText">CONTACT.</h1>
     </div>
-</div>
+    <div class="container">
+        <section style="margin-bottom: 30px;">
+            <h2 style="color: #fff; font-family: Roboto, sans-serif; font-size: 2em; margin-bottom: 10px;">We'd Love to Hear From You!</h2>
+            <p style="color: #e3e3e3; font-size: 1.1em;">
+                Have questions, suggestions, or feedback? Fill out the form below and our team will get back to you as soon as possible.
+            </p>
+        </section>
+        <!-- Replace the form below with your Google Form embed code -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpyLMkmPLU8ppSvXd29zPovSI8A_Z1VpL_FLShMlCnK8CAkg/viewform?usp=sharing"
+                width="80%" height="60%" frameborder="0"
+                style="background: #fff; border-radius: 12px;">
+            Loading…
+        </iframe>
+    </div>
 </div>
 </body>
 </html>

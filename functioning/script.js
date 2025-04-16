@@ -136,6 +136,15 @@ function openMenu() {
     document.getElementById("menuLogo").style.top = menuOpened ? "0px" : "-225px";
 }
 
+function getItemMinWidth() {
+    if (window.innerWidth <= 600) {
+        return "calc(100% - 8px)";
+    } else if (window.innerWidth <= 1300) {
+        return "calc((100% / 3) - 8px)";
+    } else {
+        return "calc((100% / 5) - 8px)";
+    }
+}
 
 let divOpened = false;
 const video = document.querySelectorAll(".vid");
@@ -147,7 +156,11 @@ function clickedDiv() {
     const videos = document.querySelectorAll(".vid");
     
     if (enlargedDiv) {
-        enlargedDiv.style.minWidth = divOpened ? "98%" : "calc((100% / 5) - 8px)";
+        if (divOpened) {
+            enlargedDiv.style.minWidth = "98%";
+        } else {
+            enlargedDiv.style.minWidth = getItemMinWidth();
+        }
         enlargedDiv.style.zIndex = divOpened ? "2" : "1";
         home.style.overflowX = divOpened ? "hidden" : "scroll";
 
